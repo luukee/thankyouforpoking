@@ -25,6 +25,11 @@ body,
         font-size: calc(3.5vw);
     }
 }
+@media screen and (min-width: 768px), screen and (max-width: calc(1943px)) and (orientation: landscape) {
+    .portfolio-grid-overlay .portfolio-title {
+        font-size: calc(3vw);
+    }
+}
 h4 {
 	letter-spacing: 14.2px;
 }
@@ -48,7 +53,7 @@ h4 {
 .sqs-block-html a {
 	text-decoration: none;
 }
-// Image shadow
+/* Image shadow */
 section:not(.dark) .image-block-outer-wrapper {
 	box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.18);
 }
@@ -78,7 +83,7 @@ section:not(.dark) .image-block-outer-wrapper {
 		visibility: visible;
 		width: 50%;
 		margin-left: 50%;
-		box-shadow: -5px 5px 15px #000;
+		box-shadow: 3px 1px 12px 0px #000
 	}
 }
 /* portfolio pg titles */
