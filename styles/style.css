@@ -1,0 +1,155 @@
+/* smooth scroll */
+html {
+	scroll-behavior: smooth;
+}
+body,
+.site-wrapper .header-menu .header-menu-bg {
+	background: url("https://images.squarespace-cdn.com/content/641e3e611ef2cd00b7949db5/446ad008-d9b5-498a-b919-c0f93c73551a/bk-texture-200px.png"),
+		#3b3329;
+	background-repeat: repeat;
+	background-size: 180px;
+}
+.newsletter-block .newsletter-form-field-element {
+  background: var(--portfolio-grid-overlay-title-color);
+}
+@media (hover: hover) {
+	.tweak-portfolio-grid-overlay-show-text-before-hover
+		.portfolio-grid-overlay
+		.grid-item:hover
+		.portfolio-text {
+		opacity: 1;
+	}
+}
+@media screen and (min-width: 768px), screen and (max-width: calc(1943px)) and (orientation: landscape) {
+    .portfolio-grid-overlay .portfolio-title {
+        font-size: calc(3.5vw);
+    }
+}
+h4 {
+	letter-spacing: 14.2px;
+}
+/* desktop header navigation */
+@media screen and (min-width: 768px) {
+	.header-menu-nav-folder-content {
+  		justify-content: start;
+  	}
+  	.header-menu-nav-item a {
+        font-size: 4vmin;
+		margin: 2vw 5vw;
+    }
+}
+.sqs-block-horizontalrule hr {
+	height: 2px;
+}
+:not(.header--menu-open) .header-border[data-header-style="dynamic"] {
+	border-width: 2px !important;
+}
+
+.sqs-block-html a {
+	text-decoration: none;
+}
+// Image shadow
+section:not(.dark) .image-block-outer-wrapper {
+	box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.18);
+}
+/* mobile menu on desktop */
+/* https://insidethesquare.co/squarespace-tutorials/mobile-menu-desktop */
+.header .header-burger {
+	display: flex;
+}
+.header-nav,
+.header-actions {
+	display: none;
+}
+.header--menu-open .header-menu {
+	opacity: 1;
+	visibility: visible;
+}
+.header .header-burger {
+	display: flex;
+}
+.header-nav,
+.header-actions {
+	display: none;
+}
+@media screen and (min-width: 768px) {
+	.header--menu-open .header-menu {
+		opacity: 1;
+		visibility: visible;
+		width: 50%;
+		margin-left: 50%;
+		box-shadow: -5px 5px 15px #000;
+	}
+}
+/* portfolio pg titles */
+.portfolio-grid-overlay .grid-item .portfolio-text .portfolio-title {
+    white-space: nowrap;
+}
+/*homepage hide footer IG reel*/
+.homepage footer>section:first-of-type {
+    display: none;
+}
+/* lightbox */
+.sqs-lightbox-meta {
+  font-family: var(--body-font-font-family);
+  letter-spacing: var(--portfolio-grid-overlay-title-font-letter-spacing);
+}
+/* custom IG grid */
+.instagram-block {
+  .slide {
+    transition: all .3s ease !important;
+
+    .sqs-video-opaque {
+      z-index: -1;
+    }
+
+    &:hover {
+      filter: grayscale(1);
+    }
+  }
+
+  .slide {
+    &:hover {
+      .image-slide-anchor,
+      .content-fill {
+        &::before {
+          z-index: 1;
+          opacity: 1;
+          pointer-events: none;
+        }
+      }
+
+      .sqs-video-icon {
+        opacity: 0;
+      }
+    }
+
+    .sqs-video-icon {
+      transition: opacity .3s ease-in-out !important;
+    }
+
+    .image-slide-anchor,
+    .content-fill {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content:'';
+       /* background: url(https://static1.squarespace.com/static/63d30649e1198611bd3dd80e/t/63f109675d9eaa14393c670b/1676740967868/instagram+icon.png);*/
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity .3s ease-in-out !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
